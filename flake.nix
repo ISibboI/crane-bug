@@ -50,6 +50,7 @@
             cargoExtraArgs = "--bin crane-bug";
             doCheck = false;
             pname = "crane-bug";
+            installCargoArtifactsMode = "use-zstd";
           });
           debugBinary = craneLib.buildPackage(commonArgs // {
             inherit cargoDebugArtifacts;
@@ -63,11 +64,13 @@
             cargoExtraArgs = "--bin crane-bug";
             doCheck = false;
             pname = "crane-bug";
+            installCargoArtifactsMode = "use-zstd";
           });
           binary = craneLib.buildPackage(commonArgs // {
             inherit cargoArtifacts;
             cargoBuildCommand = "cargo build --locked --profile release";
             cargoExtraArgs = "--bin crane-bug";
+            doCheck = false;
             pname = "crane-bug";
           });
         in
