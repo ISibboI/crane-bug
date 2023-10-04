@@ -10,7 +10,7 @@
       };
     };
     crane = {
-      url = "github:ipetkov/crane";
+      url = "github:isibboi/crane";
       inputs = {
         nixpkgs.follows = "nixpkgs";
         rust-overlay.follows = "rust-overlay";
