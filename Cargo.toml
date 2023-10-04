@@ -5,6 +5,10 @@ edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+# Prevent crane from rebuilding dependencies unnecessarily (https://github.com/ipetkov/crane/issues/370)
+[profile.dev.build-override]
+debug = false
+
 [[bin]]
 name = "crane-bug"
 path = "src/main.rs"
